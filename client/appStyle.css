@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  background: #EEF1FB;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.top-bar {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background: #fff;
+  box-shadow: #00000034 0 0 10px;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Saira", sans-serif;
+}
+
+.topBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.top-bar .title,
+.top-bar .btn-tutorial {
+  margin: 10px 20px;
+}
+
+.top-bar .title {
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+.main-block {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: #00000034 0 0 10px;
+}
+
+.control-block, .desc-block, .graph-block {
+  box-shadow: #00000044 0 0 10px;
+}
+
+.panel-block {
+  width: 95%;
+  height: 45%;
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.control-block {
+  flex: 1;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.control-block .control-label {
+  font-family: "Gantari", sans-serif;
+  margin: 10px 0;
+  width: 90%;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.control-block .control-label h4{
+  font-family: "Saira", sans-serif;
+}
+.control-block h3,
+.desc-block h3,
+.graph-block .title-block {
+  padding: 5px 0px;
+  width: 100%;
+  background: #f5f5f5;
+  text-align: center;
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(15px, 2.5vw, 20px);
+}
+
+.control-block .control-label input {
+  padding: 4px 4px 0px 0px;
+  border: none;
+  background: none;
+  border-bottom: #000 solid 2px;
+  box-sizing: content-box;
+  font-family: "Gantari", sans-serif;
+  font-weight: 750;
+}
+
+/* Botones hover y active */
+
+.btn {
+  transition: 0.1s ease-in;
+  width: 100%;
+}
+
+.btn:hover {
+  scale: 1.02;
+  cursor: pointer;
+  box-shadow: #000 0px 2px 0px 0px;
+}
+
+.btn:active {
+  scale: 0.95;
+}
+
+/*------------------------------------*/
+
+/* Menus en botones */
+
+.search-pam-container {
+  position: absolute;
+  max-height: 150px;
+  width: 100%;
+  transform: translate(0, -105%);
+  background: #ffffff;
+  border: solid 2px #000000;
+  border-radius: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(0, -100%);
+  visibility: hidden;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  border: #dddcdc 2px solid;
+}
+
+.search-pam-container.active {
+  opacity: 1;
+  transform: translate(0, -106%);
+  visibility: visible;
+  pointer-events: all;
+}
+
+.pams-container h4 {
+  background: #ffffff;
+  border: #ffffff solid 2px;
+  transition: all 0.2s ease;
+}
+
+.pams-container h4.select {
+  background: #f1f1f1;
+  border: #252525 solid 2px;
+}
+
+section {
+  position: relative;
+  flex: 1;
+}
+
+.selectAddSeqContainer {
+  position: absolute;
+  width: 100%;
+  max-height: 150px;
+  transform: translate(0, -105%);
+  background: #ffffff;
+  border: #dddcdc 2px solid;
+  border-radius: 5px;
+  padding: 4px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translate(0, -100%);
+  visibility: hidden;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.selectAddSeqContainer.active {
+  opacity: 1;
+  transform: translate(0, -106%);
+  visibility: visible;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+}
+
+.addSeqContainer {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #349371 #fff;
+  height: 90%;
+}
+
+.optAddSeq {
+  transition: color .1s ease;
+}
+
+.optAddSeq:hover {
+  color: #349371;
+}
+
+/*------------------------------------*/
+
+.control-block .control-label .ADN-label {
+  padding: 5px 0px;
+}
+
+.control-block .control-label .ARN-label {
+  padding: 5px 0px;
+}
+
+.control-block .initial-btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.control-block .initial-btns .btn {
+  flex: 1 1;
+  min-width: max-content;
+  height: max-content;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: clamp(10px, 2.5vw, 16px);
+  color: #008AA3;
+}
+
+.control-block .edit-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Gantari", sans-serif;
+  font-weight: 800;
+  gap: 10px;
+}
+
+.control-block .edit-btns p {
+  margin: 0 15px 0 0;
+  font-size: 20px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 800;
+}
+
+.control-block .edit-btns button {
+  width: clamp(80px, 25vw, 120px);
+  height: max-content;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(10px, 2.5vw, 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.control-block .edit-btns .cut-btn {
+  flex: 1 1 100%;
+  background: linear-gradient(90deg,#9ed2db 0%, #5cc4a0 50%) border-box;
+  color: #fff;
+  box-shadow: #86a5b1 0 2px 5px;
+}
+.control-block .edit-btns .add-btn {
+  background: linear-gradient(90deg,rgba(92, 196, 160, 1) 0%, rgba(29, 168, 119, 1) 100%);            
+  color: #fff;
+  width: 100%;
+  box-shadow: rgba(92, 196, 160, 1) 0 2px 5px;
+}
+.control-block .edit-btns .delete-btn {
+  background: linear-gradient(90deg,rgba(255, 44, 88, 1) 0%, rgba(255, 46, 52, 1) 100%);
+  color: #ffffff;
+  box-shadow: #FF2E34 0 2px 5px;
+}
+
+.desc-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 5px;
+  min-width: 300px;
+}
+
+.desc-container {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 600;
+  position: relative;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.055);
+  margin: 10px;
+  padding: 10px;
+  scrollbar-width: thin;
+}
+
+.desc-container span {
+  color: #349371;
+  font-weight: 800;
+}
+
+.desc-container div p {
+  font-size: clamp(10px, 1.4vw, 16px);
+}
+
+.graph-block {
+  flex: 1 1 100%;
+  width: 95%;
+  height: 45%;
+  max-height: 45%;
+  border-radius: 5px;
+  margin: 20px 20px 0px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-block .svg-container {
+  width: 98%;
+  height: 90%;
+  margin: 10px;
+  overflow-y: clip;
+  font-family: "Gantari", sans-serif;
+  overflow-x: auto;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #000000bd #fff;
+}
+
+.graph-block .svg-container .wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.055);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 800;
+}
+
+.graph-block .svg-container .wall p {
+  width: 50%;
+  text-align: center;
+}
+
+.graph-block .svg-container .textGraph {
+  margin: 6px 0px;
+  position: sticky;
+  left: 0;
+  display: none;
+}
+
+.graph-block .svg-container .toolTip-bases {
+  position: absolute;
+  width: max-content;
+  pointer-events: none;
+  background: #000000bb;
+  text-align: left;
+  padding: 0.5rem;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+@keyframes selectPam {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+
+/* Menus absolutos */
+
+.selectionAdnBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0000007a;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.selectionAdnContainer {
+  width: 60vw;
+  height: 70vh;
+  background: #EEF1FB;
+  border: #000 solid 2px;
+  border-radius: 7px;
+  outline: #ffffff solid 2px;
+  outline-offset: 0 2px;
+  scale: 0.5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #349371 #EEF1FB;
+}
+
+.selectionAdnContainer .topBarAdnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 10px;
+  background: #EEF1FB;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px #EEF1FB;
+  padding: 0 0 0 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.selectionAdnContainer .topBarAdnContainer h2 {
+  color: #349371;
+  font-family: "Saira", sans-serif;
+  font-weight: 800;
+}
+
+.selectionAdnContainer .topBarAdnContainer i {
+  color: #349371;
+  font-size: 40px;
+}
+
+.selectionAdnContainer .topBarAdnContainer .close-selection-adn-btn {
+  transform-origin: 50% 92%;
+  transition: all 0.2s ease;
+}
+
+.selectionAdnContainer .topBarAdnContainer .close-selection-adn-btn:hover {
+  scale: 1.2;
+}
+
+.selectionAdnBackground.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  backdrop-filter: blur(1px);
+}
+
+.selectionAdnBackground.active .selectionAdnContainer {
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+.selectionAdnContainer .selectionContainer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  gap: 10px;
+  overflow: auto;
+  scrollbar-width: thin;
+  height: 90%;
+}
+
+.rectAdn {
+  flex: 1 0 45%;
+  min-width: 300px;
+  height: max-content;
+  padding: 10px;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: #00000046 0 0 5px;
+  border: none;
+  transition: scale 0.12s ease;
+  font-family: "Gantari", sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+
+.rectAdn:before {
+  content: "";
+  border-radius: 5px;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.rectAdn:after {
+  border-radius: 5px;
+  content: "";
+  background: linear-gradient(90deg, #ffffff 50%, #349371 100%);
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+  transition: all .12s ease-in;
+  z-index: -1;
+}
+
+.rectAdn:hover::after {
+  width: 100%;
+}
+
+.rectAdn span {
+  color: #349371;
+}
+
+.rectAdn h4 {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rectAdn:hover {
+  scale: 1.02;
+}
+
+.rectAdn:active {
+  scale: 0.98;
+}
+
+/*-----Alertas-----*/
+.alertStacker {
+  position: absolute;
+  display: flex;
+  flex-direction: column; 
+  justify-content: end; 
+  right: 0;
+  bottom:0;
+}
+
+.alertBox {
+  width: 18vw;
+  border-radius: 10px;
+  background: rgba(255, 46, 52, 1);
+  height: 5em;
+  margin: 10px 20px;
+  padding: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  border-bottom: rgb(173, 42, 46) solid 5px;
+  text-align: center;
+  position: relative;
+}
+
+.alertBox .alertTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.alertBox h3 {
+  font-size: clamp(13px, 2.5vw, 15px);
+  font-family: "Saira", sans-serif;
+}
+
+.alertBox p {
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-family: "Rajdhari", sans-serif;
+  margin: 0 2px;
+}

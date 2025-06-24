@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eef1fb;
+  min-height: 100vh;
+}
+
+#pathADN {
+  stroke: #000000;
+  stroke-width: 100px;
+  fill: none;
+}
+
+.bloque-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.top-bar {
+  margin: 0px 0px 10px 0px;
+  width: 97vw;
+  height: 4vw;
+  min-height: 45px;
+  max-height: 60px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-family: "Gantari", sans-serif;
+  padding: 20px;
+}
+
+.top-bar .credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.top-bar .credits h3 {
+  font-size: clamp(1.5rem, 1.4vw, 2rem);
+  font-family: "Gantari", sans-serif;
+  font-weight: 700;
+}
+
+.top-bar .credits button {
+  padding: 5px 15px;
+  font-size: clamp(17px, 1.4vw, 24px);
+  border-radius: 7px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 700;
+  background: #349371;
+  color: #d4ff00;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.top-bar .credits button:active {
+  scale: 0.9;
+}
+
+.main-container {
+  height: max-content;
+  min-height: 85vh;
+  width: 97vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.main-container .title-container {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80vh;
+}
+
+.main-container .title-container h3 {
+  font-family: "Saira", sans-serif;
+}
+
+.main-container .title-container h1 {
+  font-family: "Gantari", sans-serif;
+  font-weight: 900;
+  margin: 0px 0px 20px 0px;
+  font-size: clamp(30px, 2.5vw, 200px);
+}
+
+.main-container .title-container h1 span {
+  color: #000;
+}
+
+.main-container .title-container p {
+  text-align: center;
+  font-family: "Gantari", sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 18px);
+  width: clamp(80%, 2.5vw, 60%);
+}
+
+.main-container .title-container button,
+a {
+  margin: 10px 2px;
+  padding: 10px 14px;
+  font-size: clamp(13px, 2.5vw, 17px);
+  border-radius: 5px;
+  font-family: "Gantari", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  width: max-content;
+}
+
+.main-container .title-container .btn-container a {
+  color: #349371;
+  background: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: #00000069 0 0 10px;
+}
+
+.main-container .title-container .btn-container .github-btn {
+  border: none;
+  color: #fff;
+  background: #349371;
+  box-shadow: #00000069 0 0 10px;
+}
+
+.main-container .title-container .btn-container a:hover, button:hover {
+  scale: 1.03;
+}
+
+.main-container .title-container .btn-container button:active {
+  scale: 0.9;
+}
+.main-container .title-container .btn-container a:active {
+  scale: 0.9;
+}
+
+
+

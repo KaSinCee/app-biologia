@@ -1,0 +1,369 @@
+[
+  {
+    "gen": "PDCD1 (PD-1)",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Inmunoterapia contra cáncer",
+    "secuencia_5to3": "GCTAGTCGATGCCGGAATTCGCGTACCGTTAGCGTACCGGATCGTACGTA",
+    "gRNAs": [
+      {
+        "nombre_arng": "PD1_gRNA1",
+        "gRNA": "CCAGCACCGACCACAGCCCAG",
+        "pam": "TGG",
+        "posicion_pam": 27,
+        "corte": 24,
+        "descripcion": "Inactiva el receptor PD-1 al inducir una indel en el exón 1, promoviendo la actividad antitumoral de linfocitos T."
+      },
+      {
+        "nombre_arng": "PD1_gRNA2",
+        "gRNA": "CCCTCACCCAGCCCAGCCCAG",
+        "pam": "GGG",
+        "posicion_pam": 45,
+        "corte": 42,
+        "descripcion": "Interrumpe la expresión del receptor PD-1 mediante corte en una región intermedia clave."
+      },
+      {
+        "nombre_arng": "PD1_gRNA3",
+        "gRNA": "CCAGCCCAGTCCCTCCACCC",
+        "pam": "TGG",
+        "posicion_pam": 66,
+        "corte": 63,
+        "descripcion": "Permite combinaciones con otros gRNAs para eliminar grandes fragmentos del gen, logrando un silenciamiento completo."
+      }
+    ]
+  },
+  {
+    "gen": "EMX1",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Validación funcional de CRISPR-Cas9 en células madre",
+    "secuencia_5to3": "GACCTGAAGGAGGCTGCTGCGGGTCCAGGGTCCGAGGCGGCGCAGGCGCTGGCGGCTGCAGGAGTTCGTGGCG",
+    "gRNAs": [
+      {
+        "nombre_arng": "EMX1_gRNA1",
+        "gRNA": "CCAGCAGCCTCCTTCAGGTC",
+        "pam": "CGG",
+        "posicion_pam": 27,
+        "corte": 24,
+        "descripcion": "Corte en sitio conservado para validar eficiencia del sistema CRISPR en células humanas."
+      },
+      {
+        "nombre_arng": "EMX1_gRNA2",
+        "gRNA": "GACCCTGGACCCGCAGCAGC",
+        "pam": "GGG",
+        "posicion_pam": 45,
+        "corte": 42,
+        "descripcion": "Usado para estudios de deleciones con doble corte, modelando mutaciones complejas."
+      },
+      {
+        "nombre_arng": "EMX1_gRNA3",
+        "gRNA": "GCCTCGGACCCTGGACCCGC",
+        "pam": "CGG",
+        "posicion_pam": 66,
+        "corte": 63,
+        "descripcion": "Genera mutaciones por cambio de marco (frameshift), inactivando el factor EMX1."
+      }
+    ]
+  },
+  {
+    "gen": "FAD2-1A",
+    "organismo": "Glycine max (soya)",
+    "aplicacion": "Modificación del perfil lipídico en aceite de soya",
+    "secuencia_5to3": "GTGGAACGAGGCGTGGTGAGGAGCAGGCTCCAGGTGTGGGAGGGAGGTTGCGGCTGTGGTGTGAGCAGGTGGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "FAD2_gRNA1",
+        "gRNA": "CACCACGCCTCGTTCCACAC",
+        "pam": "GGG",
+        "posicion_pam": 27,
+        "corte": 24,
+        "descripcion": "Reduce la actividad de FAD2-1A para bajar ácidos grasos poliinsaturados, mejorando la estabilidad del aceite."
+      },
+      {
+        "nombre_arng": "FAD2_gRNA2",
+        "gRNA": "TCCCTCCCACACCTGGAGC",
+        "pam": "AGG",
+        "posicion_pam": 45,
+        "corte": 42,
+        "descripcion": "Inactiva por completo la enzima, aumentando el contenido de ácido oleico en el aceite de soya."
+      },
+      {
+        "nombre_arng": "FAD2_gRNA3",
+        "gRNA": "AACCTCCCTCCCACACCTGG",
+        "pam": "CGG",
+        "posicion_pam": 66,
+        "corte": 63,
+        "descripcion": "Permite eliminación total del marco de lectura del gen, logrando un knock-out completo."
+      }
+    ]
+  },
+  {
+    "gen": "CCR5",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Resistencia a la infección por VIH",
+    "secuencia_5to3": "GTCTGGAAGAAGCGGCGACTGCTCCTGGCCTGAGGCGCCGCTGTGGTGGAAGATGCTGACCCAGCTGCCGGT",
+    "gRNAs": [
+      {
+        "nombre_arng": "CCR5_gRNA1",
+        "gRNA": "GAGGCGCCGCTGTGGTGGAA",
+        "pam": "TGG",
+        "posicion_pam": 30,
+        "corte": 27,
+        "descripcion": "Produce una deleción en el exón 3, generando la variante delta32 que confiere resistencia al VIH."
+      },
+      {
+        "nombre_arng": "CCR5_gRNA2",
+        "gRNA": "GCTCCTGGCCTGAGGCGCCG",
+        "pam": "AGG",
+        "posicion_pam": 48,
+        "corte": 45,
+        "descripcion": "Interrumpe la expresión completa del correceptor CCR5 en linfocitos T."
+      },
+      {
+        "nombre_arng": "CCR5_gRNA3",
+        "gRNA": "AAGCGGCGACTGCTCCTGGC",
+        "pam": "GGG",
+        "posicion_pam": 20,
+        "corte": 17,
+        "descripcion": "Permite combinarse con otros gRNAs para eliminar segmentos grandes del gen y eliminar la función del receptor."
+      }
+    ]
+  },
+  {
+    "gen": "SWEET11",
+    "organismo": "Oryza sativa (arroz)",
+    "aplicacion": "Incremento de resistencia a patógenos y mejora del rendimiento",
+    "secuencia_5to3": "ATGGGTGACCTGCGGAAGTGGGAGGAGAGGGCGGAGGAGTGGGGCAGCAGGAGAAGGAGGCGGCGGAGGAAGT",
+    "gRNAs": [
+      {
+        "nombre_arng": "SWEET11_gRNA1",
+        "gRNA": "GAGGAGAGGGCGGAGGAGTG",
+        "pam": "TGG",
+        "posicion_pam": 28,
+        "corte": 25,
+        "descripcion": "Bloquea la unión de efectores bacterianos, reduciendo susceptibilidad a Xanthomonas."
+      },
+      {
+        "nombre_arng": "SWEET11_gRNA2",
+        "gRNA": "AGCAGGAGAAGGAGGCGGCG",
+        "pam": "GGG",
+        "posicion_pam": 52,
+        "corte": 49,
+        "descripcion": "Disminuye la expresión de SWEET11 para mejorar la tolerancia al estrés osmótico."
+      },
+      {
+        "nombre_arng": "SWEET11_gRNA3",
+        "gRNA": "TGGGAGGAGAGGGCGGAGGA",
+        "pam": "CGG",
+        "posicion_pam": 36,
+        "corte": 33,
+        "descripcion": "Permite crear líneas de arroz con resistencia durable mediante edición simultánea de varios alelos."
+      }
+    ]
+  },
+  {
+    "gen": "GLUT4 (SLC2A4)",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Estudio de resistencia a la insulina y diabetes tipo 2",
+    "secuencia_5to3": "CGTGGTGGACCTGCTGGGAGCGGCGGAGGCTGAGCGGGTGGCAGGCGGCTGTGGGAGGAGGGTGGAAGGCGGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "GLUT4_gRNA1",
+        "gRNA": "GGAGCGGAGGCTGAGCGGGT",
+        "pam": "AGG",
+        "posicion_pam": 30,
+        "corte": 27,
+        "descripcion": "Corte en región promotora para analizar regulación transcripcional de GLUT4."
+      },
+      {
+        "nombre_arng": "GLUT4_gRNA2",
+        "gRNA": "GGCAGGCGGCTGTGGGAGGA",
+        "pam": "TGG",
+        "posicion_pam": 50,
+        "corte": 47,
+        "descripcion": "Inactiva el marco de lectura, permitiendo modelos celulares de deficiencia de GLUT4."
+      },
+      {
+        "nombre_arng": "GLUT4_gRNA3",
+        "gRNA": "CTGCTGGGAGCGGCGGAGGC",
+        "pam": "CGG",
+        "posicion_pam": 23,
+        "corte": 20,
+        "descripcion": "Permite estudios de edición multiplexada con otros genes relacionados al metabolismo glucídico."
+      }
+    ]
+  },
+  {
+    "gen": "ALS (Acetolactato sintasa)",
+    "organismo": "Arabidopsis thaliana",
+    "aplicacion": "Generación de resistencia a herbicidas",
+    "secuencia_5to3": "GGCTGAAGAGGCGGAGAAGCTGGTGGAGATGGCGGCGGAGAGGATGCGGAAGGAGAGGGCTGGAAGCGGAGGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "ALS_gRNA1",
+        "gRNA": "GAGAAGCTGGTGGAGATGGC",
+        "pam": "TGG",
+        "posicion_pam": 25,
+        "corte": 22,
+        "descripcion": "Induce mutaciones puntuales que otorgan resistencia a herbicidas imidazolinonas."
+      },
+      {
+        "nombre_arng": "ALS_gRNA2",
+        "gRNA": "GAGAGGATGCGGAAGGAGAG",
+        "pam": "CGG",
+        "posicion_pam": 47,
+        "corte": 44,
+        "descripcion": "Permite selección en medios con herbicidas para optimizar protocolos de edición génica."
+      },
+      {
+        "nombre_arng": "ALS_gRNA3",
+        "gRNA": "GGCTGGAAGCGGAGGAGGAG",
+        "pam": "GGG",
+        "posicion_pam": 65,
+        "corte": 62,
+        "descripcion": "Usado en combinaciones para eliminar funcionalmente el gen ALS."
+      }
+    ]
+  },
+  {
+    "gen": "PCSK9",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Reducción de colesterol LDL en sangre",
+    "secuencia_5to3": "GACTGGGAGAGCTGGAGGCGGCTGGGAGGAGGAGCCTGGAGGGTGGAGAGGCTGAGGGAAGCGGCTGGAGGGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "PCSK9_gRNA1",
+        "gRNA": "GCTGGGAGGAGGAGCCTGGA",
+        "pam": "TGG",
+        "posicion_pam": 37,
+        "corte": 34,
+        "descripcion": "Inactiva PCSK9 para aumentar la expresión de receptores LDL y reducir el colesterol."
+      },
+      {
+        "nombre_arng": "PCSK9_gRNA2",
+        "gRNA": "GGTGGAGAGGCTGAGGGAAG",
+        "pam": "CGG",
+        "posicion_pam": 60,
+        "corte": 57,
+        "descripcion": "Permite modelos in vitro de pérdida de función de PCSK9."
+      },
+      {
+        "nombre_arng": "PCSK9_gRNA3",
+        "gRNA": "GAGGCGGCTGGGAGGAGGAG",
+        "pam": "AGG",
+        "posicion_pam": 20,
+        "corte": 17,
+        "descripcion": "Estudios de edición combinada con otros genes de metabolismo lipídico."
+      }
+    ]
+  },
+  {
+    "gen": "EPSPS",
+    "organismo": "Zea mays (maíz)",
+    "aplicacion": "Desarrollo de resistencia a glifosato",
+    "secuencia_5to3": "GGAAGGAGGCGGTGGAGGCGGTCGGGAGGAGGAGGCTGAGCGGAGGAGGCTGGGAGAGGAGCTGGAGGAGGGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "EPSPS_gRNA1",
+        "gRNA": "GCGGTGGAGGCGGTCGGGAG",
+        "pam": "TGG",
+        "posicion_pam": 23,
+        "corte": 20,
+        "descripcion": "Introduce mutaciones que confieren resistencia al herbicida glifosato."
+      },
+      {
+        "nombre_arng": "EPSPS_gRNA2",
+        "gRNA": "GAGGCTGGGAGAGGAGCTGG",
+        "pam": "CGG",
+        "posicion_pam": 55,
+        "corte": 52,
+        "descripcion": "Permite selección positiva en medios con glifosato para edición eficiente."
+      },
+      {
+        "nombre_arng": "EPSPS_gRNA3",
+        "gRNA": "GGAGGAGGCTGAGCGGAGGA",
+        "pam": "GGG",
+        "posicion_pam": 38,
+        "corte": 35,
+        "descripcion": "Usado en experimentos de doble edición con genes relacionados a la tolerancia a herbicidas."
+      }
+    ]
+  },
+  {
+    "gen": "DMD (Distrofina)",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Terapia génica para distrofia muscular de Duchenne",
+    "secuencia_5to3": "GGCTGAGGAGGCTGGAAGGAGGCGGGAGAGGCTGGAGGAGGGGAGCGGAGGCTGAGGAGGAGGCTGGAGGAGA",
+    "gRNAs": [
+      {
+        "nombre_arng": "DMD_gRNA1",
+        "gRNA": "GGCTGAGGAGGCTGGAAGGA",
+        "pam": "TGG",
+        "posicion_pam": 20,
+        "corte": 17,
+        "descripcion": "Corta en el exón 51 para restaurar el marco de lectura de la distrofina."
+      },
+      {
+        "nombre_arng": "DMD_gRNA2",
+        "gRNA": "GCGGGAGAGGCTGGAGGAGG",
+        "pam": "CGG",
+        "posicion_pam": 36,
+        "corte": 33,
+        "descripcion": "Permite edición de exones múltiples para tratamientos personalizados."
+      },
+      {
+        "nombre_arng": "DMD_gRNA3",
+        "gRNA": "GGAGCGGAGGCTGAGGAGGA",
+        "pam": "TGG",
+        "posicion_pam": 50,
+        "corte": 47,
+        "descripcion": "Empleada en estudios preclínicos para la corrección de mutaciones en células musculares."
+      }
+    ]
+  },
+  {
+    "gen": "PDS (Phytoene desaturase)",
+    "organismo": "Solanum lycopersicum (tomate)",
+    "aplicacion": "Validación de edición génica en plantas por fenotipo visible",
+    "secuencia_5to3": "CCTCCGACTCCTCCGACCCTCCTCCTCCCGACCTTCCGCCTCCTCCGCCCTCTCCGACCTCCTCCCCTCGCCT",
+    "edits": {
+      "add": [
+        {
+          "nombre": "Codones STOP",
+          "secuencia": "TAATAGTGA",
+          "efecto": "La enzima Lycopene ε-cyclase deja de producirse, bloqueando la conversión de licopeno. El tomate acumula más pigmento rojo (licopeno), mejorando su color, sabor y valor antioxidante."
+        },
+        {
+          "nombre": "Proteina S1ERF.B3",
+          "secuencia": "TACCCATACGACGTGCCCACGTACGAC",
+          "efecto": "La proteína SlERF.B3 se expresa con una etiqueta detectable en su extremo C-terminal. Esto permite rastrear, purificar o visualizar esta proteína en estudios de respuesta a estrés."
+        }
+      ]
+    }
+  },
+  {
+    "gen": "HBB (Hemoglobina beta)",
+    "organismo": "Homo sapiens",
+    "aplicacion": "Edición génica para anemia drepanocítica",
+    "secuencia_5to3": "ATGGTGCACCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAG",
+    "edits": {
+      "add": [
+        {
+          "nombre": "Codon STOP (ATG)",
+          "secuencia": "ATG",
+          "posicion": 20,
+          "efecto": "La traducción se detiene antes → proteína beta-globina truncada → puede simular anemia falciforme o β-talasemia."
+        },
+        {
+          "nombre": "Proteina GTP",
+          "secuencia": "ATGGTGAGCAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCC",
+          "posicion": 17,
+          "efecto": "Se ha insertado la proteína fluorescente GFP en la región del gen reconocida por el ARNg. La célula ahora produce una versión modificada del gen HBB que contiene GFP. Esto permite visualizar la expresión del gen mediante fluorescencia verde bajo luz UV"
+        },
+        {
+          "nombre": "Anti FLAG",
+          "secuencia": "GACTACAAAGACGATGACGATAAG",
+          "efecto": "Purificación o detección de proteínas con anticuerpos anti-FLAG."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="appStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://kit.fontawesome.com/51fa0402c2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <title>Simulación CRIPSR-Cas9</title>
+  </head>
+  <body>
+    <div class="selectionAdnBackground">
+      <div class="selectionAdnContainer">
+        <div class="topBarAdnContainer">
+          <h2>SELECCIONE EL ADN:</h2>
+          <button
+            class="close-selection-adn-btn"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 25px;
+              position: relative;
+              height: 25px;
+              background: none;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            <div
+              style="
+                background: #349371;
+                width: 25px;
+                height: 4px;
+                border-radius: 5px;
+                transform: rotate(-135deg);
+                position: absolute;
+              "
+            ></div>
+            <div
+              style="
+                background: #349371;
+                width: 25px;
+                height: 4px;
+                transform: rotate(135deg);
+                border-radius: 5px;
+                position: absolute;
+              "
+            ></div>
+          </button>
+        </div>
+
+        <div class="selectionContainer"></div>
+      </div>
+    </div>
+    <div class="top-bar">
+      <div class="topBarContainer">
+        <h1 class="title">
+          Simulación del <span style="color: #349371">CRISPR-Cas9</span>
+        </h1>
+      </div>
+    </div>
+    <div class="main-block">
+      <div class="graph-block">
+        <h3 class="title-block">Bloque gráfico</h3>
+        <div class="svg-container" id="container">
+          <div class="wall">
+            <p>Seleccione su ADN para empezar con la graficación</p>
+          </div>
+          <div class="textGraph"><h3>Hebra no objetivo (3' ➡ 5'):</h3></div>
+          <svg
+            class="first-strand"
+            preserveAspectRatio="xMinYMid"
+            style="display: block"
+          ></svg>
+          <div class="textGraph"><h3>Hebra objetivo (5' ➡ 3'):</h3></div>
+          <svg
+            class="second-strand"
+            preserveAspectRatio="xMinYMid"
+            style="display: block"
+          ></svg>
+          <div class="textGraph"><h3>Hebra ARNg (3' ➡ 5'):</h3></div>
+          <svg
+            class="arn_strand"
+            preserveAspectRatio="xMinYMid"
+            style="display: block"
+          ></svg>
+        </div>
+      </div>
+      <div class="panel-block">
+        <div class="control-block">
+          <h3>Bloque de control</h3>
+          <div class="control-label">
+            <div class="initial-btns">
+              <h4 style="font-size: clamp(15px, 2vw, 19px)">
+                Opciones de inicio
+                <span style="color: #349371">(Pre ARNg)</span>:
+              </h4>
+              <button
+                class="add-adn-btn btn"
+                style="
+                  background: linear-gradient(90deg,#9ed2db 0%, #5cc4a0 50%) border-box;
+                  border-radius: 50em;
+                  border: 4px solid transparent;
+                  flex: 1 1 100%;
+                  color: #fff;
+                  box-shadow: #86a5b1 0 2px 5px;
+                "
+              >
+                Introducir secuencia de ADN
+              </button>
+              <section>
+                <div class="search-pam-container">
+                  <h4
+                    style="
+                      font-size: 17px;
+                      margin: 4px 0;
+                      padding: 4px;
+                      max-height: 150px;
+                      box-sizing: border-box;
+                      background: #ffffff;
+                    "
+                  >
+                    Ingrese un ADN Primero
+                  </h4>
+                  <div
+                    class="pams-container"
+                    style="
+                      overflow-y: auto;
+                      max-height: 100px;
+                      scrollbar-width: thin;
+                      scrollbar-color: #349371 #fff;
+                    "
+                  ></div>
+                </div>
+                <button
+                  class="show-pams-btn btn"
+                  style="
+                    background: linear-gradient(white, white) padding-box,
+                      linear-gradient(90deg, #5cc4a0 0%, #9ed2db 100%)
+                        border-box;
+                    border-radius: 50em;
+                    border: 4px solid transparent;
+                    box-shadow: #9ed2db 0 2px 5px;
+                  "
+                >
+                  Buscar y seleccionar secuencia PAM
+                </button>
+              </section>
+              <button
+                class="insert-arn-btn btn"
+                style="
+                  background: linear-gradient(white, white) padding-box,
+                    linear-gradient(90deg, #5cc4a0 0%, #9ed2db 100%) border-box;
+                  border-radius: 50em;
+                  border: 4px solid transparent;
+                  box-shadow: #9ed2db 0 2px 5px;
+                "
+              >
+                Insertar ARNg complementario
+              </button>
+            </div>
+
+            <div class="edit-btns" style="font-family: 'Gantari', sans-serif">
+              <h4 style="font-size: clamp(15px, 2vw, 19px)">
+                Opciones de edición
+                <span style="color: #349371">(Post ARNg)</span>:
+              </h4>
+              <button class="cut-btn btn">
+                <i class="bi bi-scissors"></i>Cortar
+              </button>
+              <section style="flex: 1">
+                <div class="selectAddSeqContainer">
+                  <h4
+                    style="
+                      width: max-content;
+                      font-size: 17px;
+                      margin: 4px 0;
+                      padding: 4px;
+                      max-height: 150px;
+                      box-sizing: border-box;
+                    "
+                  >
+                    Ingrese la opción a añadir
+                  </h4>
+                  <div class="addSeqContainer"></div>
+                </div>
+                <button class="add-btn btn">
+                  <i class="bi bi-send-plus-fill"></i>Agregar
+                </button>
+              </section>
+              <button class="delete-btn btn">
+                <i class="bi bi-trash-fill"></i>Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="desc-block">
+          <h3>Bloque de Descripción</h3>
+          <div class="desc-container">
+              <p style="width: 100%">
+                [!] Cargue primero un ADN para empezar ...
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alertStacker"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="./animation.js" type="module"></script>
+  <script src="./d3-src/svg.js" type="module"></script>
+  <script src="app.js" type="module"></script>
+</html>
